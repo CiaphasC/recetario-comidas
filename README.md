@@ -20,7 +20,7 @@ Aplicacion moderna para gestionar recetas, ingredientes y compras utilizando Nex
 ## Instalacion del frontend
 
 ```bash
-cd "Nueva carpeta"
+cd "recetario"
 npm install
 ```
 

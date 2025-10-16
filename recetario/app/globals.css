@@ -1,0 +1,118 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  /* Vibrant, colorful theme with bold food colors */
+  --background: oklch(0.99 0.01 85); /* Warm cream */
+  --foreground: oklch(0.2 0.02 85); /* Rich dark */
+  --card: oklch(1 0 0); /* Pure white */
+  --card-foreground: oklch(0.2 0.02 85);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.2 0.02 85);
+  --primary: oklch(0.65 0.22 25); /* Vibrant coral/orange */
+  --primary-foreground: oklch(1 0 0);
+  --secondary: oklch(0.55 0.15 160); /* Bright emerald green */
+  --secondary-foreground: oklch(1 0 0);
+  --muted: oklch(0.96 0.01 85); /* Light beige */
+  --muted-foreground: oklch(0.5 0.02 85);
+  --accent: oklch(0.75 0.18 65); /* Warm amber/yellow */
+  --accent-foreground: oklch(0.2 0.02 85);
+  --destructive: oklch(0.577 0.245 27.325);
+  --destructive-foreground: oklch(1 0 0);
+  --border: oklch(0.9 0.01 85); /* Subtle border */
+  --input: oklch(0.96 0.01 85);
+  --ring: oklch(0.65 0.22 25);
+  --chart-1: oklch(0.65 0.22 25); /* Coral */
+  --chart-2: oklch(0.55 0.15 160); /* Emerald */
+  --chart-3: oklch(0.75 0.18 65); /* Amber */
+  --chart-4: oklch(0.6 0.2 280); /* Purple */
+  --chart-5: oklch(0.65 0.18 200); /* Cyan */
+  --radius: 0.75rem;
+  --sidebar: oklch(1 0 0);
+  --sidebar-foreground: oklch(0.2 0.02 85);
+  --sidebar-primary: oklch(0.65 0.22 25);
+  --sidebar-primary-foreground: oklch(1 0 0);
+  --sidebar-accent: oklch(0.96 0.01 85);
+  --sidebar-accent-foreground: oklch(0.2 0.02 85);
+  --sidebar-border: oklch(0.9 0.01 85);
+  --sidebar-ring: oklch(0.65 0.22 25);
+}
+
+@theme inline {
+  /* Vibrant, colorful palette */
+  --color-background: 252 250 247; /* Warm cream */
+  --color-foreground: 30 25 20; /* Rich dark */
+
+  --color-card: 255 255 255; /* Pure white */
+  --color-card-foreground: 30 25 20;
+
+  --color-popover: 255 255 255;
+  --color-popover-foreground: 30 25 20;
+
+  --color-primary: 255 107 74; /* Vibrant coral */
+  --color-primary-foreground: 255 255 255;
+
+  --color-secondary: 16 185 129; /* Bright emerald */
+  --color-secondary-foreground: 255 255 255;
+
+  --color-muted: 245 242 238; /* Light beige */
+  --color-muted-foreground: 100 95 90;
+
+  --color-accent: 245 158 11; /* Warm amber */
+  --color-accent-foreground: 30 25 20;
+
+  --color-destructive: 220 38 38;
+  --color-destructive-foreground: 255 255 255;
+
+  --color-border: 230 225 220; /* Subtle border */
+  --color-input: 245 242 238;
+  --color-ring: 255 107 74;
+
+  --color-success: 34 197 94;
+  --color-warning: 234 179 8;
+
+  --radius: 0.75rem;
+
+  --font-sans: var(--font-geist-sans);
+  --font-serif: var(--font-playfair);
+  --font-mono: var(--font-geist-mono);
+
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-serif;
+  }
+}
